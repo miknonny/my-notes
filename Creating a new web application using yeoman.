@@ -1,0 +1,140 @@
+Creating a new web application using yeoman.
+Mordern workflows for modern web apps.
+ Yeoman is comprised of three main tools.
+ Yo - for application scaffolding.
+ Bower - for fornt end package management.
+ Grunt  - for building your projects.
+
+Tog get Yeomna install we will run 
+$ npm install -g yo
+This installs yeomman and other dependencies.
+
+next we need to install an angularjs angular generator for scaffolding out a new app.
+note that we only need to do this once.
+
+$ npm install -g generator-angular
+
+ 
+ next we need to run yo angular to begin scaffolding out a new application.
+ we run 
+ $ yo angular
+
+
+ next we are going to see what this looks like to we are going to run 
+ 
+ $ grunt server
+now we can see what our server looks like.
+
+Because this project is using live reload,  we cna make changes to our surces and with out having to do anything it will refresh the browser.
+
+So we have a realtime view of what is going on inside our app.
+ 
+ To see the frontend packages that you have installed.
+ $ bower list
+
+
+To search for packages in bower.
+
+$ bower search angular-ui
+Uninstall  a package
+bower uninstall angualar-ui
+
+Adding packages to bower.
+bower register <package name> <git end point>
+
+more can be seen at the bower help
+
+to get a specifc verion of a package.
+bower install <package>#<version>
+
+if you have already installed serveral components. you can run 
+$bower init
+
+this created a bower.json file listing all the dependencies installed.
+now all you have to do next time is run
+$bower install.
+this will look at the bower.json file and install all the dependencies.
+
+
+For unit testing we will be using karma unit test that was scaffolded out
+for us.
+
+In our project we can do unit testing under test/spec/contrllers/main.js.
+After testing out the code,  we can run.
+
+$ grunt test
+ 
+what this does is it fires up karma which will run our unit test.
+
+
+Production ready version of application.
+this includes minifying your code with uglify.
+opimizing your code for production.
+linking in your code.
+-> handling abstractions that you might be using like coffee script.
+   and creating an optimized build that you can push to production.
+we do this by running the grunt command.
+
+$ grunt
+
+this command creates a dist directory in your project folder.
+this is the code that you will be pushing to production.
+
+
+Final thing that we will be doing is to deploy our application.
+
+you can customise your project to deploy to pretty much any where.
+In this case we will be using heroku
+
+now we can use another yeoman generator so save some time here.
+
+now we are going to
+
+$ npm install -g generator-heroku
+This includes using git to handle this process.
+therefore saves us a lot of time.
+
+now we are gonna run 
+$ yo heroku.
+this generates some configuration that we can copy to our grunt file.
+for our heroku deployment.
+
+it will ask if we want a seperate repository in disk.
+
+now all we need to do is copy paste this into our grunt file under the copy task.
+
+
+now we can push the dist directory which contains the production ready version of our application to heroku.
+first
+$ cd dist
+$heroku apps:create
+
+now all we need to do is push it.
+
+git substree --prefix dist heroku master.
+
+
+summary.
+
+now there are lots of grunt tasks plugin that help you acheive lots of 
+task deployment at build time.
+ 
+ grunt can also help you hook up your app to some middleware like express or php.
+
+Remember that yeoman has a growing number of generators that are available on npm.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
