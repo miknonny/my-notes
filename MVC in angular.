@@ -58,6 +58,111 @@ this will wxpand to show a complete date for us to work with.
 
 
 
+Basic controller.
+This are ways to associate models with ui.
+
+Basic controller example.
+
+
+html
+<div ng-app="app" ng-controller="ctrl">
+	{{message}}
+<div>
+
+javascript.
+angular.module('app', [])
+	.controller('ctrl', function ($scope) {
+		$scope.message = "You are as great as your actions.";
+	});	
+
+This is a very brief introduction. there are lot more.
+
+Dependency Injection.
+server Communication.
+Internationalization.
+form validation.
+Views and routes.
+Mocks and unit testing support.
+Scenario test runner.
+
+If  you are learninging to write code you can check out our youtube channel.
+
+you can checkout the built with. to checkout apps that where builtwith with angular. also also see apps that support animations in angular.
+
+To get a deep understanding we have a developer documentation.
+here we take you through all the components of angular, how we do model view controller etc. how databinding is done. All this is covered here.
+
+There is also a set of Api docs.
+where you can read about the differnt api.
+
+there is also  a blog. blog.angualar.org
+This is whre to look for updates or announcement.
+where we will be and when we are gonna do releases.
+
+if you got qtns there is a really vibrant community. on google groups.
+
+Check out the angualar express for restful service.
+
+
+
+Brian built Youtube app for ps4.
+
+Now lets build a shopping cart with angular.
+
+brian works us throught the processs of scaffolding a new angular app.
+
+Making a simple shoping cart.
+Things to be included in the shopping cart.
+1. it has a listing of different items.
+2. you select different items and it shows you how much the different items cost.
+note that every time you remove an angular sub-genrator from disk you also need to remove it from test/specification.
+
+now if we run 
+
+$ yo serve.
+
+It compiles all our stuff together and opens up a brower.
+Note that this will watch our file for changes. and immediately refresh our page to reflect those changes.
+
+Now we need  a service where we can get our catalogue items from.
+lets create one using angular by running the following command.
+
+$ yo anglar:service catalog
+
+This creates a file in app/scripts/service/angular.js
+
+This link is also included in your index.html file.
+
+If we look at the index.html file we can see the file together with app.js and main.js. during build these three files are minified and concatenated together to one file.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

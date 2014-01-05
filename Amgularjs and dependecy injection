@@ -1,0 +1,26 @@
+Amgularjs and dependecy injection
+
+dependency injection has to deal writing small untis of code the wiring all the small units of code when you are done.
+
+dependency injection makes you write less code.
+it is highly extensible.
+it is much more easier to test.
+
+Lets start.
+here note that in most apps we have been building like the todo app, after checking some todos
+and deleting we see that on refresh all that we deleted are back. this is because
+every thing is hardcoded in the controller and there is no way we could have been 
+able to delete.
+
+Now we need to get an instance of omngodb.
+Now here we will be using mongolab. because they provide for me mongodb and aa resful
+api.
+
+The idea is to abstract all the data inclded in the logic and make it a service.
+This service will be responsible for sending  all the request, sending proper header.
+parsing the response and all this stuff related to mongolab.
+
+think about the mongolab as a model.
+
+Igor MIna on data binding
+
