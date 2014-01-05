@@ -1,0 +1,68 @@
+MVC in angular.
+
+Model = Javascript objects.
+
+$scope.files = ['foo', 'bar', 'baz'];
+
+View = HTML
+
+<div ng-repeat="f in files"></div>
+
+controller = Plain Javascript code.
+The controller maps the relation between the ui and the model
+
+function addfile (filename) {
+	$scope.files.push(fileName);
+}
+
+
+note that in angular everything runs in the client. We just talk to the server to get the data that the application need.
+
+THE DOM.
+-data binding and directives.
+
+Databinding.
+This allows us to set up the model and the view in thesame way that we setup
+spreadshits. i.e when we make changes to once cell. those changes are automatically reflected on another cell.
+
+lets look at the following example.
+
+<!doctype html>
+
+<html ng-app>   <!-- this is the application root -->
+	<head>
+		<script src="angular.min.js"></script>
+	</head>
+
+	<body>
+		<div>
+			<label>Name:</label> <input type="text" ng-model="your name" placeholder="Enter your name">
+			<hr>
+			<h1>Hello {{your name}}!</h1>
+		</div>
+	</body>
+What this means is that you want to insert some text here{{your namae}} from a model element. in this case ng-model="your name".
+such that once some body changes the input it is automatically reflected on the page. This is called databinding.
+
+Directives.
+This are bits of code in our html that expands to do something more.
+example
+
+<div class='data-picker'
+	<div>
+		<div>
+			...
+
+this will wxpand to show a complete date for us to work with.
+
+
+
+
+
+
+
+
+
+
+
+ 
